@@ -8,12 +8,12 @@ pkg install php-apache nano wget
 
 nano $PREFIX/etc/apache2/httpd.conf
 
-descomente o mpm_preform_module e comente mpm_worker_module
+descomente o mpm_prefork_module e comente mpm_worker_module
 
 nova linha abaixo dessa
 
 LoadModule php_module /data/data/com.termux/files/usr/libexec/apache2/libphp.so
-<FilesMatch \.php$>
+<FilesMatch \\.php$>
     SetHandler application/x-httpd-php
 <FilesMatch>
 
